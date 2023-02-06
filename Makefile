@@ -1,5 +1,5 @@
 default: ./src/*
-	g++ -g ./src/*.cpp -I ./Pieces -o ./bin/engine
+	g++ -Wall -Werror -Wextra -Wsign-conversion -pedantic -O2 -g --std=c++17 -o ./bin/engine ./src/*
 
 clean:
 	rm -rf ./bin/*
