@@ -2,12 +2,10 @@
 #define PIECE_HPP
 
 #include <vector>
-#include <string>
-#include "../Board.hpp"
-#include "../Square.hpp"
-#include "../Color.hpp"
-
-struct Move;
+#include "Board.hpp"
+#include "Square.hpp"
+#include "Color.hpp"
+#include "Move.hpp"
 
 class Piece
 {
@@ -16,7 +14,7 @@ public:
 	const Color& get_color() const;
 	const Square& get_square() const;
 	bool get_has_moved() const;
-	virtual std::vector<Square> get_legal_moves(const Board& board) const = 0;
+	virtual std::vector<Move> get_legal_moves(const Board& board) const = 0;
 
 	void move(const Move& m);
 	void undo_move(const Move& m);

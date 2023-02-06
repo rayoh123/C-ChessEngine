@@ -3,9 +3,11 @@
 
 #include "Piece.hpp"
 
-class Rook : Piece {
+class Rook : public Piece 
+{
+public:
 	Rook(const char color, const Square starting_square);
-	std::vector<Square> get_legal_moves(const Board& board) const;
+	std::vector<Move> get_legal_moves(const Board& board) const;
 };
 
 #endif

@@ -2,8 +2,8 @@
 #define SQUARE_HPP
 
 struct Square{
-	int col;
-	int row;
+	unsigned col;
+	unsigned row;
 	bool operator ==(const Square& square2) const;
 };
 
