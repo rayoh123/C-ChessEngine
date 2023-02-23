@@ -1,33 +1,21 @@
 #include <gtest/gtest.h>
 #include "../src/Board.hpp"
 
-namespace
+// Demonstrate some basic assertions.
+TEST(SimpleTests, BasicAssertions) 
 {
-	TEST(MateInOnes, RookMate)
-	{
-		EXPECT_TRUE(true);
-	}
-
+	// Expect two strings not to be equal.
+	EXPECT_STRNE("hello", "world");
+	// Expect equality.
+	EXPECT_EQ(7 * 6, 42);
 }
 
-// #include <gtest/gtest.h>
-// #include "../src/math_stuff.hpp"
+TEST(SimpleTests, TestFactorial)
+{
+	EXPECT_EQ(120, 120);
+}
 
-// // Demonstrate some basic assertions.
-// TEST(SimpleTests, BasicAssertions) 
-// {
-//   // Expect two strings not to be equal.
-//   EXPECT_STRNE("hello", "world");
-//   // Expect equality.
-//   EXPECT_EQ(7 * 6, 42);
-// }
-
-// TEST(SimpleTests, TestFactorial)
-// {
-// 	EXPECT_EQ(factorial(5), 120);
-// }
-
-// TEST(SimpleTests, TestSquare)
-// {
-// 	EXPECT_EQ(square(5), 25);
-// }
+TEST(SimpleTests, TestSquare)
+{
+	EXPECT_EQ(25, 25);
+}

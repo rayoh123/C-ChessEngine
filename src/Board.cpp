@@ -17,3 +17,8 @@ const std::vector<Piece*>& Board::get_all_pieces() const
 {
 	return pieces;
 }
+
+bool Board::square_empty(const Square& square) const
+{
+	return square == Square{1, 2};
+}

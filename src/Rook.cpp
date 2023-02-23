@@ -12,13 +12,18 @@ std::vector<Move> Rook::get_legal_moves(const Board& board) const
 	const unsigned rook_col = square.col;
 	const unsigned rook_row = square.row;
 
-	const std::vector<Piece*> pieces = board.get_all_pieces();
-
+	std::vector<Move> legal_moves;
 
 	for (unsigned col = rook_col; col != 0; --col)
 	{
-		// Piece* 
-		// if ()
+		if (board.square_empty(Square{rook_col, rook_row}))
+		{
+			// legal_moves.push_back(Move)
+		}
+		else
+		{
+			
+		}
 	}
 
 	for (unsigned row = rook_row; row != 0; --row)

@@ -1,5 +1,15 @@
-default: ./src/*
-	g++ -Wall -Werror -Wextra -Wsign-conversion -pedantic -O2 -g --std=c++17 -o ./bin/engine ./src/*
+CC:=g++
+CFLAGS:=-g -Wall -Werror -Wextra -Wsign-conversion -pedantic -O2 --std=c++20
+BIN_NAME:=engine
+SRC_DIR:=src
+INCLUDE_DIR:=include
+BIN_DIR:=bin
+
+default: src/*
+	mkdir -p $(BIN_DIR)
+	$(CC) -I $(INCLUDE_DIR) $(CFLAGS) $(SRC_DIR)/* -o $(BIN_DIR)/$(BIN_NAME)
 
 clean:
-	rm -rf ./bin/*
+	rm -rf $(BIN_DIR)
+
+.PHONY: clean
