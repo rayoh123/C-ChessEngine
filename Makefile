@@ -5,7 +5,7 @@ SRC_DIR:=src
 INCLUDE_DIR:=include
 BIN_DIR:=bin
 
-default: src/*
+default:
 	mkdir -p $(BIN_DIR)
 	$(CC) -I $(INCLUDE_DIR) $(CFLAGS) $(SRC_DIR)/* -o $(BIN_DIR)/$(BIN_NAME)
 
